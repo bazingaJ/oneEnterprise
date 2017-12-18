@@ -1,0 +1,50 @@
+//
+//  PrefixHeader.pch
+//  E+TAXI_company
+//
+//  Created by jeaderq on 16/6/24.
+//  Copyright © 2016年 yangjx. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import "UIView+QYexcetion.h"
+#import "JDTools.h"
+#ifdef DEBUG // 处于开发阶段
+#define JDLog(...) NSLog(__VA_ARGS__)
+#else // 处于发布阶段
+#define JDLog(...)
+#endif
+#define CLIENTID [[NSUserDefaults standardUserDefaults]objectForKey:@"clientID"]
+
+
+//#define JDUrl @"http://192.168.1.155:8080/tad/client"
+#define JDUrl @"http://114.55.57.237/tad/client"
+#define publicKeyRSA [[NSUserDefaults standardUserDefaults]objectForKey:@"publicKey"]
+#define PERMISSION [[NSUserDefaults standardUserDefaults]objectForKey:@"permission"]
+#define USERNAME [[NSUserDefaults standardUserDefaults]objectForKey:@"userName"]
+#define LOGINTIME [[NSUserDefaults standardUserDefaults]objectForKey:@"loginTime"]
+
+#import "EPRSA.h"
+#import "AFNetworking.h"
+#import "JDTools.h"
+#import "JDData.h"
+#import "MJExtension.h"
+#import "JDModel.h"
+#import "UIButton+CountDown.h"
+#import "UIImageView+WebCache.h"
+#import "JDLoginController.h"
+
+#define WIDTH(a,b) (a/b*[UIScreen mainScreen].bounds.size.width)
+#define HEIGHT(a,b) ((a/b)*[UIScreen mainScreen].bounds.size.height)
+
+#define JDScreenH [UIScreen mainScreen].bounds.size.height
+#define JDScreenW [UIScreen mainScreen].bounds.size.width
+
+#define RGBColor(a,b,c)  [UIColor colorWithRed:a/255.0 green:b/255.0 blue:c/255.0 alpha:1.0]
+#define randomColor [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1]
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */

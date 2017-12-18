@@ -1,0 +1,24 @@
+//
+//  JDEnterpriseChooseCell.m
+//  E+TAXI_company
+//
+//  Created by jeaderq on 16/6/28.
+//  Copyright © 2016年 yangjx. All rights reserved.
+//
+
+#import "JDEnterpriseChooseCell.h"
+
+@implementation JDEnterpriseChooseCell
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    // Initialization code
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+
+    // Configure the view for the selected state
+}
+
+@end
